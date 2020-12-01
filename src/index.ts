@@ -8,7 +8,7 @@ import PuppeteerBrowser from './browser';
 
 (async () => {
   const time = new Time();
-  const logger = new Logger(time, LogLevel.critical, 'Starting app');
+  const logger = new Logger(time, LogLevel.normal, 'Starting app');
   const browser = await new PuppeteerBrowser(logger).launch();
   const page = await browser.newPage();
   const screenshot = new Screenshot(page, logger, time);
